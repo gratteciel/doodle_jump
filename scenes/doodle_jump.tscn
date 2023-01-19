@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/plateform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/doodle_jump.gd" type="Script" id=3]
+[ext_resource path="res://scenes/cloud_plateform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/spring_plateform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/font/Kenney Blocks.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 90, 25 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 6 )
+
+[node name="doodle_jump" type="Node2D"]
+script = ExtResource( 3 )
+scene_plateform = [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 4 ) ]
+
+[node name="plateform_container" type="Node2D" parent="."]
+
+[node name="plateform" parent="plateform_container" instance=ExtResource( 1 )]
+position = Vector2( 90, 300 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 90, 160 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 90, 160 )
+current = true
+
+[node name="plateform_eraser" type="Area2D" parent="Camera2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/plateform_eraser"]
+position = Vector2( 0, 203 )
+shape = SubResource( 1 )
+
+[node name="score" type="Label" parent="Camera2D"]
+margin_left = -90.0
+margin_top = -150.0
+margin_right = -50.0
+margin_bottom = -136.0
+rect_min_size = Vector2( 180, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 1
+valign = 1
+
+[connection signal="body_entered" from="Camera2D/plateform_eraser" to="." method="_on_plateform_eraser_body_entered"]

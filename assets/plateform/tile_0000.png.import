@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1003344937850515577.webp-6720d11d2fc602b10882d24e88c45f69.stex"
+path="res://.import/tile_0000.png-648db2fa1215342620b6e8343733840e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personnages/1003344937850515577.webp"
-dest_files=[ "res://.import/1003344937850515577.webp-6720d11d2fc602b10882d24e88c45f69.stex" ]
+source_file="res://assets/plateform/tile_0000.png"
+dest_files=[ "res://.import/tile_0000.png-648db2fa1215342620b6e8343733840e.stex" ]
 
 [params]
 

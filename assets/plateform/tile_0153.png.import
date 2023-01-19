@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/999388160498872420.webp-89d75aa1124ab2166bf067ba3f927bd1.stex"
+path="res://.import/tile_0153.png-095dcf9a25fee90fcb48296bee6ed05e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://personnages/999388160498872420.webp"
-dest_files=[ "res://.import/999388160498872420.webp-89d75aa1124ab2166bf067ba3f927bd1.stex" ]
+source_file="res://assets/plateform/tile_0153.png"
+dest_files=[ "res://.import/tile_0153.png-095dcf9a25fee90fcb48296bee6ed05e.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
