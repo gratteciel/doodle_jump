@@ -2,15 +2,33 @@
 
 importer="texture"
 type="StreamTexture"
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:personnages/999388160498872420.webp.import
 path="res://.import/999388160498872420.webp-89d75aa1124ab2166bf067ba3f927bd1.stex"
+=======
+path="res://.import/character_0026.png-aa463fe7689c4883ab0c5aee5c0058b3.stex"
+>>>>>>> Stashed changes:plateformes/character_0026.png.import
+=======
+path="res://.import/999388160498872420.webp-89d75aa1124ab2166bf067ba3f927bd1.stex"
+>>>>>>> Stashed changes
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:personnages/999388160498872420.webp.import
 source_file="res://personnages/999388160498872420.webp"
 dest_files=[ "res://.import/999388160498872420.webp-89d75aa1124ab2166bf067ba3f927bd1.stex" ]
+=======
+source_file="res://plateformes/character_0026.png"
+dest_files=[ "res://.import/character_0026.png-aa463fe7689c4883ab0c5aee5c0058b3.stex" ]
+>>>>>>> Stashed changes:plateformes/character_0026.png.import
+=======
+source_file="res://personnages/999388160498872420.webp"
+dest_files=[ "res://.import/999388160498872420.webp-89d75aa1124ab2166bf067ba3f927bd1.stex" ]
+>>>>>>> Stashed changes
 
 [params]
 

@@ -5,6 +5,11 @@ var vitesse = Vector2.ZERO #on crée un vecteur 2D avec une abscisse et ordonné
 var hauteurDeSaut = 400
 var accelerationHorizontale = 200
 
+<<<<<<< Updated upstream
+=======
+signal mortConfirmee(joueur)
+
+>>>>>>> Stashed changes
 func Deplacement(delta): #delta représente une frame sur l'ordinateur
 	
 	vitesse.y += pesanteur #on augmente la vitesse à chaque instant par la constante de pesanteur
@@ -12,7 +17,13 @@ func Deplacement(delta): #delta représente une frame sur l'ordinateur
 	var collision = move_and_collide(vitesse * delta) #le personnage bouge dans la direction souhaitée (ici il tombe) jusqu'à un contact avec un objet de collision
 	
 	if collision: #move_and_collide retourne un bool en cas de contact
+<<<<<<< Updated upstream
 		vitesse.y= -hauteurDeSaut #crée le rebond
+=======
+		vitesse.y= -hauteurDeSaut*collision.collider.coefficient_rebond #crée le rebond
+		if collision.collider.has_method("interaction"):
+			collision.collider.interaction()
+>>>>>>> Stashed changes
 		
 	#Animation de chute
 	if vitesse.y > 0:
@@ -48,5 +59,13 @@ func Deplacement(delta): #delta représente une frame sur l'ordinateur
 		
 #Le code ci-dessous gère la physique du personnage
 
+<<<<<<< Updated upstream
+=======
+func mort():
+	emit_signal("mortConfirmee",self)
+	vitesse = Vector2.ZERO
+	set_collision_mask_bit(1, false)
+
+>>>>>>> Stashed changes
 func _physics_process(delta): #_physics_process est un type de fonction pré-existant
 	Deplacement(delta)

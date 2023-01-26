@@ -20,9 +20,16 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 42, 63.5 )
 
+<<<<<<< Updated upstream
 [node name="Adel" type="KinematicBody2D"]
 position = Vector2( 1, 1 )
 scale = Vector2( 0.5, 0.5 )
+=======
+[node name="Adel" type="KinematicBody2D" groups=["joueur"]]
+position = Vector2( 1, 1 )
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 6
+>>>>>>> Stashed changes
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true,
