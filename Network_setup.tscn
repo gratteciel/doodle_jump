@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="Network_setup" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Multiplayer_conf" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
