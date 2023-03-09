@@ -8,34 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "HBoxContainer",
-"class": "ContributorClass",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/ContributorClass.gd"
-}, {
-"base": "PanelContainer",
-"class": "GistItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/GistItem.gd"
-}, {
-"base": "HBoxContainer",
-"class": "InvitationItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/InvitationItem.gd"
-}, {
-"base": "PanelContainer",
-"class": "RepositoryItem",
-"language": "GDScript",
-"path": "res://addons/github-integration/scripts/RepositoryItem.gd"
-} ]
-_global_script_class_icons={
-"ContributorClass": "",
-"GistItem": "",
-"InvitationItem": "",
-"RepositoryItem": ""
-}
-
 [application]
 
 config/name="Doodle"
@@ -45,10 +17,8 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://global.gd"
-PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
-IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
-UserData="*res://addons/github-integration/scripts/user_data.gd"
-RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
+Save="*res://save/save.gd"
+Server="*res://server/client.gd"
 
 [display]
 
@@ -56,16 +26,25 @@ window/size/width=180
 window/size/height=320
 window/size/test_width=360
 window/size/test_height=640
+window/handheld/orientation="portrait"
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/github-integration/plugin.cfg" )
+enabled=PoolStringArray(  )
+
+[global]
+
+souris=false
 
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [physics]
 

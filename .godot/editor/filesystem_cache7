@@ -1,0 +1,44 @@
+0b7126e0c6e86d3ec295a72f5aa6e0bd
+::res://::1674732988
+default_env.tres::Environment::-1::1674097942::0::1::::<><>::
+global.gd::GDScript::-1::1674097600::0::1::::<>Node<>::
+icon.png::CompressedTexture2D::9048320333268830454::1674085298::1674732990::1::::<><>::
+README.md::TextFile::-1::1674098373::0::1::::<><>::
+VERSION.md::TextFile::-1::1674097989::0::1::::<><>::
+::res://assets/::1674098754
+::res://assets/char/::1674098754
+character_0006.png::CompressedTexture2D::2091704349659932298::1625309535::1674732990::1::::<><>::
+character_0007.png::CompressedTexture2D::8161942033164186511::1625309535::1674732990::1::::<><>::
+::res://assets/font/::1674098754
+Kenney Blocks.ttf::FontFile::5678566544937867909::1674094560::1674732990::1::::<><>::
+::res://assets/plateform/::1674098754
+tile_0000.png::CompressedTexture2D::7421388759144786910::1674091911::1674732990::1::::<><>::
+tile_0001.png::CompressedTexture2D::1348065243341797573::1621707848::1674732990::1::::<><>::
+tile_0003.png::CompressedTexture2D::3158755450427410258::1621707849::1674732990::1::::<><>::
+tile_0107.png::CompressedTexture2D::7924838596417060638::1674091779::1674732990::1::::<><>::
+tile_0108.png::CompressedTexture2D::4910403130131782875::1674091779::1674732990::1::::<><>::
+tile_0153.png::CompressedTexture2D::8821982059650848017::1674091779::1674732990::1::::<><>::
+tile_0155.png::CompressedTexture2D::3718073279564263197::1674091779::1674732990::1::::<><>::
+::res://assets/ui/::1674098754
+flatDark15.png::CompressedTexture2D::5778308733564363110::1674095824::1674732990::1::::<><>::
+flatDark34.png::CompressedTexture2D::4927522583411916982::1674095801::1674732990::1::::<><>::
+::res://personnages/::1674690030
+999388160498872420.webp::CompressedTexture2D::4707179218485475775::1674098373::1674732990::1::::<><>::
+1003344937850515577.webp::CompressedTexture2D::4766074754384399980::1674098373::1674732990::1::::<><>::
+::res://scenes/::1674690027
+Adel.gd::GDScript::-1::1674098373::0::1::::<>KinematicBody2D<>::
+Adel.tscn::PackedScene::-1::1674098373::0::1::::<><>::res://personnages/1003344937850515577.webp<>res://personnages/999388160498872420.webp<>res://scenes/Adel.gd
+cloud_plateform.gd::GDScript::-1::1674093429::0::1::::<><>::
+cloud_plateform.tscn::PackedScene::-1::1674096102::0::1::::<><>::res://assets/plateform/tile_0153.png<>res://assets/plateform/tile_0155.png<>res://scenes/cloud_plateform.gd
+doodle_jump.gd::GDScript::-1::1674097928::0::1::::<><>::
+doodle_jump.tscn::PackedScene::-1::1674097942::0::1::::<><>::res://scenes/plateform.tscn<>res://scenes/player.tscn<>res://scenes/doodle_jump.gd<>res://scenes/cloud_plateform.tscn<>res://scenes/spring_plateform.tscn<>res://assets/font/Kenney Blocks.ttf
+Monde.tscn::PackedScene::-1::1674098373::0::1::::<><>::res://scenes/plateforme.tscn<>res://scenes/Adel.tscn
+plateform.gd::GDScript::-1::1674093167::0::1::::<><>::
+plateform.tscn::PackedScene::-1::1674096102::0::1::::<><>::res://assets/plateform/tile_0001.png<>res://assets/plateform/tile_0003.png<>res://scenes/plateform.gd
+plateforme.tscn::PackedScene::-1::1674098373::0::1::::<><>::res://assets/Tiles/tile_0003.png<>res://assets/Tiles/tile_0001.png
+player.gd::GDScript::-1::1674093714::0::1::::<>KinematicBody2D<>::
+player.tscn::PackedScene::-1::1674096102::0::1::::<><>::res://assets/char/character_0006.png<>res://assets/char/character_0007.png<>res://scenes/player.gd
+spring_plateform.gd::GDScript::-1::1674093910::0::1::::<><>::
+spring_plateform.tscn::PackedScene::-1::1674096102::0::1::::<><>::res://assets/plateform/tile_0108.png<>res://assets/plateform/tile_0000.png<>res://assets/plateform/tile_0107.png<>res://scenes/spring_plateform.gd
+title_menu.gd::GDScript::-1::1674097826::0::1::::<><>::
+title_menu.tscn::PackedScene::-1::1674097929::0::1::::<><>::res://assets/ui/flatDark34.png<>res://assets/ui/flatDark15.png<>res://assets/font/Kenney Blocks.ttf<>res://scenes/title_menu.gd

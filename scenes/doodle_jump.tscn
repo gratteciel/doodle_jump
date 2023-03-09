@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/plateform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -6,11 +6,13 @@
 [ext_resource path="res://scenes/cloud_plateform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/spring_plateform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/font/Kenney Blocks.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/ui/arrow_control.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 90, 25 )
 
 [sub_resource type="DynamicFont" id=2]
+resource_local_to_scene = true
 font_data = ExtResource( 6 )
 
 [node name="doodle_jump" type="Node2D"]
@@ -46,5 +48,20 @@ custom_fonts/font = SubResource( 2 )
 text = "0"
 align = 1
 valign = 1
+
+[node name="gauche" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2( -90, 109 )
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 7 )
+passby_press = true
+action = "ui_left"
+
+[node name="droite" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2( 90, 160 )
+rotation = 3.14159
+scale = Vector2( 0.1, 0.1 )
+normal = ExtResource( 7 )
+passby_press = true
+action = "ui_right"
 
 [connection signal="body_entered" from="Camera2D/plateform_eraser" to="." method="_on_plateform_eraser_body_entered"]

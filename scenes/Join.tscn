@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/font/Kenney Blocks.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/Join.gd" type="Script" id=2]
+[ext_resource path="res://scenes/WaitingRoom.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 8
+font_data = ExtResource( 1 )
+
+[node name="join" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -30.0
+margin_right = 60.0
+margin_bottom = 30.0
+color = Color( 0.14902, 0.552941, 0.984314, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -60.0
+margin_top = -60.0
+margin_right = 60.0
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+margin_right = 120.0
+margin_bottom = 12.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Lobby"
+align = 1
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/VBoxContainer"]
+margin_top = 16.0
+margin_right = 120.0
+margin_bottom = 40.0
+columns = 2
+
+[node name="name" type="Label" parent="ColorRect/VBoxContainer/GridContainer"]
+margin_top = 6.0
+margin_right = 50.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 2 )
+text = "Username"
+
+[node name="nametextbox" type="LineEdit" parent="ColorRect/VBoxContainer/GridContainer"]
+margin_left = 54.0
+margin_right = 119.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 65, 10 )
+align = 1
+
+[node name="join_button" type="Button" parent="ColorRect/VBoxContainer"]
+margin_top = 44.0
+margin_right = 120.0
+margin_bottom = 62.0
+custom_fonts/font = SubResource( 4 )
+text = "Join"
+clip_text = true
+icon_align = 1
+expand_icon = true
+
+[node name="iptextbox" type="LineEdit" parent="."]
+visible = false
+margin_left = 18.0
+margin_top = 34.0
+margin_right = 76.0
+margin_bottom = 58.0
+editable = false
+
+[node name="porttextbox" type="LineEdit" parent="."]
+visible = false
+margin_left = 87.0
+margin_top = 33.0
+margin_right = 145.0
+margin_bottom = 57.0
+editable = false
+
+[node name="WaitingRoom" parent="." instance=ExtResource( 3 )]
+
+[node name="ItemList" parent="WaitingRoom/ColorRect/VBoxContainer" index="1"]
+items = [ "Player 1", null, false, "Player 2", null, false ]
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/join_button" to="." method="_on_join_button_pressed"]
+
+[editable path="WaitingRoom"]
