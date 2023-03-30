@@ -50,6 +50,7 @@ func _connected_fail() -> void :
 
 func _server_disconnected() -> void :
 	print("Server disconnected !")
+	stop()
 
 
 func create_rooom()->void :
@@ -59,4 +60,26 @@ func create_rooom()->void :
 remote func update_room(room_id: int) -> void:
 	if get_tree().current_scene.name == "Multi_menu":
 		get_tree().current_scene.update_room(room_id)
+
+remote func remove_player(id: int) -> void:
+	if get_tree().current_scene.name == "Menu":
+		# Remove it from the UI
+		get_tree().current_scene.remove_player(player_info.keys().find(id))
+	else:
+		# Remove his instance from the game
+		player_info[id].instance.queue_free()
 	
+	if not player_info.erase(id):
+		printerr("Error removing player from dictionary")
+		
+		
+func _remove_all_players() -> void:
+	if get_tree().current_scene.name == "Menu":
+		# Remove all players from the UI
+		get_tree().current_scene.remove_all_players()
+	else:
+		# We are in game, remove all player instances
+		for player_id in player_info:
+			player_info[player_id].instance.queue_free()
+	
+	player_info = {}

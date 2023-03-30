@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/plateform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/cloud_plateform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/spring_plateform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/font/Kenney Blocks.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/ui/arrow.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 90, 25 )
@@ -28,6 +29,20 @@ position = Vector2( 90, 160 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 90, 160 )
 current = true
+
+[node name="right" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2( 44, 116 )
+scale = Vector2( 0.204, 0.227723 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 7 )
+action = "ui_right"
+
+[node name="left" type="TouchScreenButton" parent="Camera2D"]
+position = Vector2( -44, 162 )
+rotation = 3.14159
+scale = Vector2( 0.204, 0.228 )
+normal = ExtResource( 7 )
+action = "ui_left"
 
 [node name="plateform_eraser" type="Area2D" parent="Camera2D"]
 

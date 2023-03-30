@@ -2,7 +2,7 @@ extends Control
 
 onready var create_dialog: AcceptDialog = get_node("VBoxContainer/CreateDialog")
 onready var create_dialog_label: Label = get_node("VBoxContainer/CreateDialog/ScrollContainer/VBoxContainer/loading_label")
-onready var create_dialog_player_list: VBoxContainer = get_node("VBoxContainer/CreateDialog/ScrollContainer/VBoxContainer/Player_list")
+onready var create_dialog_player_list: VBoxContainer = get_node("VBoxContainer/CreateDialog/ScrollContainer/VBoxContainer/PlayerList")
 onready var join_dialog: WindowDialog = get_node("JoinDialog")
 onready var join_room_label: Label = join_dialog.get_node("WaitScrollContainer/VBoxContainer/Label")
 onready var join_player_list: VBoxContainer = join_dialog.get_node("WaitScrollContainer/VBoxContainer/PlayerList")
@@ -33,3 +33,25 @@ func _on_popup_hide()->void:
 
 func _on_join_pressed():
 	join_dialog.popup_centered()
+
+func add_player_to_ui(name: String) -> void:
+	if Client.is_creator:
+		create_dialog_player_list.add_player(name)
+	else:
+		join_player_list.add_player(name)
+		
+		
+func remove_player(index: int) -> void:
+	if Client.is_creator:
+		create_dialog_player_list.remove_player(index)
+	else:
+		join_player_list.remove_player(index)
+
+
+func remove_all_players() -> void:
+	if Client.is_creator:
+		create_dialog_player_list.remove_all()
+		create_dialog.hide()
+	else:
+		join_player_list.remove_all()
+		join_dialog.hide()
